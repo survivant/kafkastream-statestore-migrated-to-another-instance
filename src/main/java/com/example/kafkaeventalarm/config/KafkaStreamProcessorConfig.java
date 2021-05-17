@@ -67,10 +67,10 @@ public class KafkaStreamProcessorConfig {
         Map<String, Object> config = new HashMap<>();
         setDefaults(config);
         //config.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
-        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "NumberStreamProcessor2");
+        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "NumberStreamProcessor");
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.ByteArray().getClass());
-        config.put(ConsumerConfig.CLIENT_ID_CONFIG, "NumberStreamProcessor2");
+        config.put(ConsumerConfig.CLIENT_ID_CONFIG, "NumberStreamProcessor");
         config.put(ConsumerConfig.GROUP_ID_CONFIG, numberGroupId);
         config.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, 0);
 
@@ -83,10 +83,10 @@ public class KafkaStreamProcessorConfig {
         Map<String, Object> config = new HashMap<>();
         setDefaults(config);
         //config.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
-        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "OrderStreamProcessor2");
+        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "OrderStreamProcessor");
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.ByteArray().getClass());
-        config.put(ConsumerConfig.CLIENT_ID_CONFIG, "OrderStreamProcessor2");
+        config.put(ConsumerConfig.CLIENT_ID_CONFIG, "OrderStreamProcessor");
         config.put(ConsumerConfig.GROUP_ID_CONFIG, orderGroupId);
         config.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, 0);
 
