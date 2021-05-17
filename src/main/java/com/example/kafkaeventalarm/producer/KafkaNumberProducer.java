@@ -1,8 +1,6 @@
 package com.example.kafkaeventalarm.producer;
 
-import java.time.Instant;
-import java.util.UUID;
-
+import com.example.kafkaeventalarm.model.Order;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +9,8 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.example.kafkaeventalarm.Constants;
-import com.example.kafkaeventalarm.model.Order;
+import java.time.Instant;
+import java.util.UUID;
 
 @Component
 public class KafkaNumberProducer {

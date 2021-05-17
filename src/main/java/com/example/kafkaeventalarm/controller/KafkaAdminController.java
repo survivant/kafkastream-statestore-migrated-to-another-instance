@@ -1,9 +1,6 @@
 package com.example.kafkaeventalarm.controller;
 
-import java.util.Collection;
-import java.util.Map;
-import java.util.stream.Collectors;
-
+import com.example.kafkaeventalarm.admin.KafkaAdminClient;
 import org.apache.kafka.clients.admin.ConsumerGroupListing;
 import org.apache.kafka.clients.admin.DescribeTopicsResult;
 import org.apache.kafka.clients.admin.TopicDescription;
@@ -14,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.kafkaeventalarm.admin.KafkaAdminClient;
+import java.util.Collection;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/kafka")

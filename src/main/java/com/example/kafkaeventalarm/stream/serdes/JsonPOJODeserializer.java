@@ -1,11 +1,10 @@
 package com.example.kafkaeventalarm.stream.serdes;
 
-import java.util.Map;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.common.errors.SerializationException;
 import org.apache.kafka.common.serialization.Deserializer;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Map;
 
 public class JsonPOJODeserializer<T> implements Deserializer<T> {
     private ObjectMapper objectMapper = new ObjectMapper();

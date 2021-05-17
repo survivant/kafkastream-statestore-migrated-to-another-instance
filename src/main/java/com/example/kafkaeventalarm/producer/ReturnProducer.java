@@ -1,14 +1,12 @@
 package com.example.kafkaeventalarm.producer;
 
+import com.example.kafkaeventalarm.model.Return;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-
-import com.example.kafkaeventalarm.Constants;
-import com.example.kafkaeventalarm.model.Return;
 
 @Service
 public class ReturnProducer {

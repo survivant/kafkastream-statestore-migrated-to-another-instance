@@ -1,24 +1,14 @@
 package com.example.kafkaeventalarm.stream;
 
-import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.annotation.PreDestroy;
-
+import com.example.kafkaeventalarm.model.Order;
+import com.example.kafkaeventalarm.stream.serdes.SerdeFactory;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.errors.InvalidStateStoreException;
-import org.apache.kafka.streams.kstream.Consumed;
-import org.apache.kafka.streams.kstream.Grouped;
-import org.apache.kafka.streams.kstream.KStream;
-import org.apache.kafka.streams.kstream.Materialized;
-import org.apache.kafka.streams.kstream.Produced;
-import org.apache.kafka.streams.kstream.TimeWindows;
-import org.apache.kafka.streams.kstream.Windowed;
+import org.apache.kafka.streams.kstream.*;
 import org.apache.kafka.streams.state.QueryableStoreType;
 import org.apache.kafka.streams.state.QueryableStoreTypes;
 import org.apache.kafka.streams.state.ReadOnlyKeyValueStore;
@@ -30,8 +20,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.config.StreamsBuilderFactoryBean;
 import org.springframework.stereotype.Service;
 
-import com.example.kafkaeventalarm.model.Order;
-import com.example.kafkaeventalarm.stream.serdes.SerdeFactory;
+import javax.annotation.PreDestroy;
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class KafkaStreamOrderProcessorWindow {
